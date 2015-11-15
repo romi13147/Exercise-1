@@ -150,7 +150,8 @@ def test_dict_to_string():
          2: 4,
          3: 2.8,
          '5': 'text'}
-    assert func.dict_to_string(d, ':') == 'test:text'
+    assert sorted(func.dict_to_string(d, ':').split(':')
+                  ) == sorted(['test', 'text'])
     d2 = {'one': 1,
           'two': 2,
           'three': 3}
@@ -158,7 +159,8 @@ def test_dict_to_string():
     d3 = {1: 'one',
           2: 'two',
           3: 'three'}
-    assert func.dict_to_string(d3, '-') == 'one-two-three'
+    assert sorted(func.dict_to_string(d3, '-').split('-')
+                  ) == sorted(['one', 'two', 'three'])
 
 
 def test_classify_by_type():
