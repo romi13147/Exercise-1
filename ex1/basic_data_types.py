@@ -33,13 +33,19 @@ Basic examples about creation of variables with different data types
 
 # define a string variable named a with the value 'my first string'
 
+a = 'my first string'
 
 # define two variables width and height with values 23.5 and 18.2
 
+width = 23.5
+height = 18.2
 
 # create a list containing the three variables you just created in the order
 # you created them. Assign this list to the variable with name l
 
+l = [a,width,height]
 
 # create a dictionary d. The keys should be the variable names you just created.
 # The values will be the actual values of the variables.
+
+d = {'a':a,'width':width,'height':height,'l':l}

@@ -38,6 +38,28 @@ Module for testing exception handling
 # also named search_n. The function should do the same as functions.search_n
 # but if the variable is not found in the list then raise a ValueError.
 
+def search_n(l,x):
+""" Search for the first x in list l and returns a tuple with index and value.
+	It only returns the first found value. If no value was found a ValueError Exception will raise.
+	
+Parameters
+----------
+l: list
+x: any
+
+Returns
+-------
+List
+
+Examples
+--------
+>>>search_n([1,2,3,4,5,3,6],3)
+(2,3)
+"""
+idx = l.index(x)
+return (idx,l[idx])
+
+
 ########################
 # Excepting Exceptions #
 ########################
@@ -46,3 +68,26 @@ Module for testing exception handling
 # the first by the second. This function should handle exceptions that might
 # occur print out what went wrong and return None if no results could be
 # computed.
+
+def safe_divide(a,b):
+""" Devides a/b. It returns None with wrong argument type and Devision by 0 
+	
+Parameters
+----------
+a,b: number (b!=0)
+
+Returns
+-------
+Float
+
+Examples
+--------
+>>>safe_divide(5,2)
+2.5
+"""	
+try:
+	return a/b
+except TypeError:
+	return None
+except ZeroDivisionError:
+	return None
