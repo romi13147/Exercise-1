@@ -49,12 +49,15 @@ def f():
 
 def add(a,b):
     """ Adds two numbers
+	
     Parameters
     ----------
-    a,b : number; eq: int,float
+    a,b : int,float
+		
     Returns
     -------
-    type: number
+    Int, float
+		a+b
     """
     return a+b
     
@@ -63,12 +66,15 @@ def add(a,b):
 
 def to_tuple(a,b,c):
     """ Creates a tuple out of 3 variables
+	
     Parameters
     ----------
     a,b,c: any type
+	
     Returns
     -------
-    type: tuple
+    tuple
+		(a,b,c)
     """
     return (a,b,c)
     
@@ -80,12 +86,15 @@ def check5(a):
     
     Parameters
     ----------
-    a: number; eq: int, float
+    a: int, float
     
     Returns
     -------
-    True or False
-    
+    True
+		when a is greater than 5
+    False
+		when a isn't greater than 5
+		
     Examples
     --------
     >>> print(check5(4))
@@ -105,11 +114,15 @@ def check_n(a,n):
     
     Parameters
     ----------
-    a,n: number; eq: int, float
+    a,n: int, float
     
     Returns
     -------
-    True or False
+    True
+		when a is greater than n
+    False
+		when a isn't greater than n
+		
     
     See Also
     --------
@@ -137,12 +150,14 @@ def check_list(numberlist,n):
     	
     Parameters
     ----------
-    numberlist: list; type of elements: number
-    n: number; eq: int, float
+    numberlist: list
+		Type of elements: number
+    n: int, float
     
     Returns
     -------
-    List with True or False as elements
+    List
+		Elements with True or False
     
     See Also
     --------
@@ -165,13 +180,15 @@ def check_list_nth(numberlist,n,nth):
     	
     Parameters
     ----------
-    numberlist: list; type of elements: number
-    n: number; eq: int, float
+    numberlist: list
+		type of elements: number
+    n: int, float
     nth: int
     
     Returns
     -------
-    List with True or False as elements
+    List
+		Elements with True or False
     
     See Also
     --------
@@ -225,7 +242,7 @@ def remove_nth(l,nth=2):
     Parameters
     ----------
     l: list
-    nth: int (optional)
+    nth: int, optional
     
     Returns
     -------
@@ -236,8 +253,9 @@ def remove_nth(l,nth=2):
     >>>print(remove_nth([1,2,3,4,5,6],3))
     [2,3,5,6]
     """
-    del l[::nth]
-    return l
+    l_copy = list(l)
+    del l_copy[::nth]
+    return l_copy
 
 # Define a function named search_n that takes a list and a variable x and
 # searches for x in the list. If the variable is found return the index of the
@@ -327,7 +345,8 @@ def lists_to_dict(keys,values):
     	
     Parameters
     ----------
-    keys,values: any type, have to have same length
+    keys,values: any type
+		Have to have same length
     
     Returns
     -------
@@ -356,7 +375,8 @@ def search_list(a,b):
     	
     Parameters
     ----------
-    a,b: list, element: any type
+    a,b: list
+		element: any type
     
     Returns
     -------

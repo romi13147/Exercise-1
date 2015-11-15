@@ -45,7 +45,7 @@ def last_of_month(dt):
 	Returns
 	-------
 	datetime.date object
-	Last day of the month
+		Last day of the month
 	
 	Example
 	-------
@@ -68,8 +68,11 @@ def feed_the_gremlin(dt):
 	
 	Returns
 	-------
-	True or False
-	
+	True
+		when dt not in timespan 0:01 to 6:29
+	False
+		dt is in timespan 0:01 to 6:29
+		
 	Example
 	-------
 	>>>print(feed_the_gremlin(time(5)))
